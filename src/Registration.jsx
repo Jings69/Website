@@ -1,56 +1,54 @@
+// src/Registration.jsx
 import React, { useState } from 'react';
+import './Registration.css'; // Import Registration CSS
 import { useNavigate } from 'react-router-dom';
-import './Registration.css'; // Import the CSS file
 
 function Registration() {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleRegistration = (e) => {
     e.preventDefault();
-    console.log("Registered with:", { name, email, password });
-    alert('Registration successful! You can now log in.');
-    navigate('/login'); // Redirect to login page after registration
+    // Registration logic here (e.g., save to database)
+    alert(`Registered: ${username}`);
+    navigate('/login'); // Redirect to login after registration
   };
 
   return (
     <div className="registration-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit} className="registration-form">
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="registration-input"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="registration-input"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="registration-input"
-          required
-        />
-        <button type="submit" className="registration-button">Register</button>
+      <h2>Registration</h2>
+      <form onSubmit={handleRegistration}>
+        <div>
+          <label>Username</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Register</button>
       </form>
-      <p>
-        Already have an account?{" "}
-        <span onClick={() => navigate('/login')} className="registration-link">
-          Login here
-        </span>
-      </p>
     </div>
   );
 }

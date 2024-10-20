@@ -1,0 +1,53 @@
+/* src/Dashboard.css */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #007bff;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 220px; /* Space for the sidebar */
+    transition: margin-left 0.3s;
+  }
+  
+  .content h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
