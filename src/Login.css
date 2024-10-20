@@ -1,0 +1,32 @@
+.login-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-input {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .login-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
