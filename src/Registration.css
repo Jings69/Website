@@ -1,0 +1,32 @@
+.registration-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .registration-input {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .registration-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .registration-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
